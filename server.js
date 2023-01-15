@@ -11,6 +11,6 @@ mongoose
   )
   .then(() => console.log("Connected to Db"));
 
-app.listen(60900, () => {
-  console.log("server connected on port 60900.");
+app.listen(5000, () => {
+  console.log("server connected on port 5000.");
 });
