@@ -118,7 +118,7 @@ router.get("/tata", async (req, res) => {
   return res.status(200).json({ business });
 });
 
-router.get("/date/:name/:date", (req, res) => {
+router.get("/:name/:date", (req, res) => {
   const m = sivasanath[req.params.name];
   const date = req.params.date;
   m.findOne({ Date: date }).then(
@@ -130,7 +130,7 @@ router.get("/date/:name/:date", (req, res) => {
     }
   );
 });
-router.get("/daterange/:name/:date1/:date2", (req, res) => {
+router.get("/:name/:date1/:date2", (req, res) => {
   const m = sivasanath[req.params.name];
   const date1 = req.params.date1;
   const date2 = req.params.date2;
@@ -149,7 +149,7 @@ router.get("/daterange/:name/:date1/:date2", (req, res) => {
     }
   );
 });
-router.get("/over/:name/:date1/:date2/:s", (req, res) => {
+router.get("/:name/:date1/:date2/:s", (req, res) => {
   const m = sivasanath[req.params.name];
   const date1 = req.params.date1;
   const date2 = req.params.date2;
