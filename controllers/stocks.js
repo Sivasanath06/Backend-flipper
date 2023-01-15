@@ -19,7 +19,7 @@ const sivasanath = {
 
 var express = require("express");
 var router = express.Router();
-router.get("/ashok", async (req, res) => {
+router.get("/ashokley", async (req, res) => {
   let business;
   try {
     business = await Ashokley.find();
@@ -103,7 +103,7 @@ router.get("/reliance", async (req, res) => {
 
   return res.status(200).json({ business });
 });
-router.get("/tata", async (req, res) => {
+router.get("/tatasteel", async (req, res) => {
   let business;
   try {
     business = await Tatasteel.find();
