@@ -1,7 +1,9 @@
 var bodyparser = require("body-parser");
 var express = require("express");
+var cors = require("cors");
 var app = express();
 app.use(bodyparser.json());
+app.use(cors());
 const { router } = require("./controllers/stocks");
 var mongoose = require("mongoose");
 app.use("/", router);
@@ -11,6 +13,6 @@ mongoose
   )
   .then(() => console.log("Connected to Db"));
 
-app.listen(5000, () => {
-  console.log("server connected on port 5000.");
+app.listen(60900, () => {
+  console.log("server connected on port 60900.");
 });
